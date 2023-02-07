@@ -1,0 +1,79 @@
+#title{
+    height: 30px;
+    width: 250px;
+    border-radius: 3px;
+    margin-left: 2%;
+    margin: 1%;
+    border: grey 1px solid;
+  
+  
+  }
+  
+  #body{
+    height: 50px;
+    width: 250px;
+    border-radius: 3px ;
+    margin-left: 2%; 
+   margin: 1%;
+   border: grey 1px solid;
+  
+  }
+  
+  #submit{
+    border-radius: 3px  ;
+    margin-left: 2%;
+    margin: 1%;
+    padding: 10px 26px;
+    border: none;
+    background-color: rgb(255, 140, 0);
+    color: white;
+  
+  }
+  #getPosts{
+    margin: 1%;
+  }
+  
+  #formCaption{
+    margin-left: 2%;
+    margin: 1%;
+  
+  
+  }
+  
+  
+  
+  .cardContainer{
+    background-color: whitesmoke;
+    display: flex;
+    margin: 5%;
+    margin-left: 2%;
+    height: 320px;
+    width: 600px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+  
+  }
+  
+  .card{
+  background-color: lightgray;
+  margin: 5%;
+  width: 100%;
+  height: 260px;
+  
+  
+  }
+  
+  .cardTitle{
+    background-color: whitesmoke;
+    margin: 3%;
+    height: 60px;
+    padding: 2%;
+  
+  }
+  .cardBody{
+    background-color: whitesmoke;
+    margin: 3%;
+    height: 100px;
+    padding: 2%;
+    
+  }

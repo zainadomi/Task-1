@@ -7,7 +7,9 @@
             zainadomi
     </title>
     <link rel="stylesheet" href="stylessheet.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="my-header"><h1>Zaina Bani-Domi</h1></div>
@@ -18,6 +20,9 @@
             <li><a href="#aboutme">About Me</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="posts.html" >Posts</a></li>
+
+
         </ul>
     </div>
     </nav>
@@ -56,25 +61,26 @@
 
         </section>
 <br><br>
+
 <h2 style="text-align: center;">More Flutter designs:</h2>
-        <!---------------------------------------------->
-        <div class="slideshow-container">
+        
+<div class="slideshow-container">
 
             <div class="mySlides fade">
               <div class="numbertext">1 / 3</div>
-              <img src="Images/myFlower.jpeg" style="width:100%">
+              <img src="Images/myFlower.jpeg" style="width:70%" height="400px">
               <div class="text">Caption Text</div>
             </div>
             
             <div class="mySlides fade">
-              <div class="numbertext">2 / 3</div>
-              <img src="Images/coffe.png" style="width:100%">
+              <div class="numbertext">2/ 3</div>
+              <img src="Images/coffe.png" style="width:70%" height="400px">
               <div class="text">Caption Two</div>
             </div>
             
             <div class="mySlides fade">
               <div class="numbertext">3 / 3</div>
-              <img src="Images/dukan.png" style="width:100%">
+              <img src="Images/dukan.png" style="width:70%" height="400px">
               <div class="text">Caption Three</div>
             </div>
             
@@ -83,45 +89,12 @@
             
             </div>
             <br>
-            
             <div style="text-align:center">
               <span class="dot" onclick="currentSlide(1)"></span> 
               <span class="dot" onclick="currentSlide(2)"></span> 
               <span class="dot" onclick="currentSlide(3)"></span> 
             </div>
-            
-            <script>
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-</script>
-
-
-
-
+        
         <section id="contact">
             <div class="section-contact" >
                 <h1 class="con">Contact</h1> 
@@ -146,9 +119,6 @@ function showSlides(n) {
                     <a href="mailto:zaina.bani-domi@pwc.com">zaina.bani-domi@pwc.com</a> 
             </div>
         </section> 
-        <!------------------------->      
     </div>
-    
-    
 </body>
 </html>
