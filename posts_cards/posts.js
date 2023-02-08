@@ -10,20 +10,24 @@ function getPosts(){
         let output = '<h2>Cards:</h2>';
         data.forEach(function(post){
             output +=`
-            <div class="cardContainer">
-            <div class="card">
+            <button onclick="editInfo"> <div class="cardContainer">
+             <div class="card">
                 <div class="cardTitle">
                  <strong >${post.title}</strong>
                 </div>
-            <div class="cardBody">
+             <div class="cardBody">
                     <p>${post.body}</p>
                 </div>
+             </div>
             </div>
-        </div>
+            </button>
             `;
         }); 
         document.getElementById('output').innerHTML = output;
     })
+}
+function editInfo(){
+    document.getElementById('title').innerHTML(post.title);
 }
 
 function addPost(e){
