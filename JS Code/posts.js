@@ -1,4 +1,5 @@
 
+// Get Posts Function: 
 
 function getPosts(){
     fetch('https://jsonplaceholder.typicode.com/posts')
@@ -71,15 +72,9 @@ function addPost(e){
     })
 }
     
-
-
 let deletePost=(e) =>{
     e.parentElement.parentElement.remove();
 };
 
 
-
-//    <span>
-        //    <button onClick="deletePost(this)" class="options">Delete</button>
-        //    <button onClick="editPost('${post.title}' , \`${post.body}\`)" class="options">Edit</button>
-        //   </span> 
+ 
