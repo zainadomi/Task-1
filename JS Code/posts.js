@@ -76,5 +76,14 @@ let deletePost=(e) =>{
     e.parentElement.parentElement.remove();
 };
 
+// Edit Post Function 
+
+    function editPost(title,body){
+            document.getElementById('title').value = title;
+            document.getElementById('body').value = body;
+
+     }
+
+
 
  
