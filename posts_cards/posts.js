@@ -1,16 +1,17 @@
-document.getElementById('getPosts').addEventListener('click',getPosts);
-document.getElementById('addPost').addEventListener('submit',addPost);
-
 
 
 function getPosts(){
     fetch('https://jsonplaceholder.typicode.com/posts')
     .then((res) => res.json())
-    .then((data) => {
-        let output = '<h2>Cards:</h2>';
-        data.forEach(function(post){
+    .then((post) => {
+        let output = "";
+        post.forEach(function(post){
             output +=`
-            <button onclick="editInfo"> <div class="cardContainer">
+           <div class="cardContainer">
+           <span>
+           <button onClick="deletePost(this)" class="options">Delete</button>
+           <button onClick="editPost('${post.title}' , \`${post.body}\`)" class="options">Edit</button>
+          </span>   
              <div class="card">
                 <div class="cardTitle">
                  <strong >${post.title}</strong>
@@ -20,18 +21,19 @@ function getPosts(){
                 </div>
              </div>
             </div>
-            </button>
-            `;
+            `; 
         }); 
         document.getElementById('output').innerHTML = output;
     })
 }
-function editInfo(){
-    document.getElementById('title').innerHTML(post.title);
-}
+
+//Add post function:
+
+document.getElementById("postForm").addEventListener('submit',addPost);
 
 function addPost(e){
     e.preventDefault();
+
     let title = document.getElementById('title').value;
     let body = document.getElementById('body').value;
 
@@ -44,8 +46,40 @@ function addPost(e){
         body:JSON.stringify({
             title:title,
             body:body,
-        })
+        }),
     })
     .then((res) => res.json())
-    .then((data) => console.log(data))
+    .then((post) => {
+        let newData ="";
+            newData +=`
+           <div class="cardContainer">
+           <span>
+           <button onClick="deletePost(this)" class="options">Delete</button>
+           <button onClick="editPost('${post.title}' , \`${post.body}\`)" class="options">Edit</button>
+          </span>   
+             <div class="card">
+                <div class="cardTitle">
+                 <strong >${post.title}</strong>
+                </div>
+             <div class="cardBody">
+                    <p>${post.body}</p>
+                </div>
+             </div>
+            </div>
+            `; 
+        document.getElementById('output').innerHTML += newData;
+    })
 }
+    
+
+
+let deletePost=(e) =>{
+    e.parentElement.parentElement.remove();
+};
+
+
+
+//    <span>
+        //    <button onClick="deletePost(this)" class="options">Delete</button>
+        //    <button onClick="editPost('${post.title}' , \`${post.body}\`)" class="options">Edit</button>
+        //   </span> 
